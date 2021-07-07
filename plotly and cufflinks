@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from plotly.offline import download_plotlyjs,init_notebook_mode,plot,iplot
+import cufflinks as cf
+init_notebook_mode(connected = True)
+
+cf.go_offline()
+
+df1=pd.DataFrame(np.random.rand(100,4), columns=['a','b','c','d'])
+
+df2=pd.DataFrame({'X':['P','Q','R'], 'Y':[1,2,3]})
+
+df1.iplot()
+df2.iplot()
